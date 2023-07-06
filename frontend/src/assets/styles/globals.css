@@ -1,0 +1,39 @@
+html {
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--surface-ground);
+  font-family: var(--font-family);
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+.p-button:disabled {
+  cursor: not-allowed !important;
+  pointer-events: all !important;
+}
+
+.p-dialog .p-dialog-header {
+  border-bottom: 1px var(--surface-border) solid !important;
+  border-left: 3px var(--primary-color) solid !important;
+}
+
+.header-icons-table .p-column-header-content {
+  justify-content: center;
+}
+
+.userOption.p-button,
+.userOption .p-button {
+  padding: 0.4rem .75rem;
+}
+
+.create-link-session-btn {
+  top: 10px;
+  right: 17px;
+}
