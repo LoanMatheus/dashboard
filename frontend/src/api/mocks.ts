@@ -3,7 +3,6 @@ type Response = {
   message: string;
 };
 
-
 export const reqLogin = () => {
   interface DataProps extends Response {
     data: { token: string };
@@ -33,7 +32,6 @@ export const reqLogValidation = () => {
     }, 1000);
   });
 };
-
 
 export const reqGetAllUsers = [
   {
@@ -245,7 +243,8 @@ export const getChats = [
       {
         id: 1,
         name: "Jane Doe",
-        userImg: "https://sf",
+        userImg:
+          "https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png",
         message: "Hello",
         phone: "55454891919",
         status: "Atendimento",
@@ -257,7 +256,8 @@ export const getChats = [
       {
         id: 2,
         name: "55454891919",
-        userImg: "https://sf",
+        userImg:
+          "https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png",
         message: "Hello",
         phone: "55454891919",
         status: "Atendimento",
