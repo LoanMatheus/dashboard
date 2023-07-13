@@ -7,8 +7,8 @@ interface MainProps {
 export default function BodyMain(props: MainProps) {
   const { children, footer, className } = props;
   return (
-    <div className={`w-full h-full z-0${footer ? 'py-7' : 'pt-7'}`}>
-      <div className={`h-full overflow-auto ${className}`}>
+    <div className={`w-full h-full z-0 ${footer ? 'pt-7 pb-8' : 'pt-7'}`}>
+      <div className={`h-full overflow-auto ${className} p-2`}>
         {children}
       </div>
     </div>

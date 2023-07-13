@@ -1,4 +1,4 @@
-import Cards from "@/components/Card";
+import Cards from "@/components/Cards";
 import { useRouter } from "next/navigation";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
@@ -38,7 +38,7 @@ export default function ChatsMenu() {
         template: (items: any, options: any) => (
           <Button onClick={(e) => options.onClick(e)} outlined text className="flex align-items-stretch col-12 p-2">
             <div className="col-2 p-0 m-0">
-              <Avatar image={body.userImg} icon={<BiUser />} className="w-3rem h-3rem" shape="circle" />
+              <Avatar image={body.userImg} icon={<BiUser />} className="w-2rem h-2rem" shape="circle" />
             </div>
             <div className="flex flex-column align-items-start justify-content-evenly col-8 m-0 py-0">
               <h4 className="font-bold text-color m-0">{body.name}</h4>

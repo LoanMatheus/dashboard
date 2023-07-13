@@ -295,3 +295,57 @@ export const getChats = [
     message: "success",
   },
 ];
+
+export const getConversations = [
+  {
+    success: true,
+    data: [
+      {
+        sender: "Client",
+        time: "10:00",
+        sender_name: "Alice Johnson",
+        message_type: "text",
+        content: "Olá, como você está?",
+      },
+      {
+        sender: "User",
+        time: "10:02",
+        sender_name: "Bob Smith",
+        message_type: "image",
+        content:
+          "https://primefaces.org/cdn/primereact/images/galleria/galleria10.jpg",
+      },
+      {
+        sender: "Client",
+        time: "10:07",
+        sender_name: "Alice Johnson",
+        message_type: "image",
+        content:
+          "https://primefaces.org/cdn/primereact/images/galleria/galleria10.jpg",
+      },
+      {
+        sender: "Client",
+        time: "10:05",
+        sender_name: "Alice Johnson",
+        message_type: "file",
+        content: "Também estou bem, obrigada!",
+      },
+      {
+        sender: "Client",
+        time: "10:07",
+        sender_name: "Alice Johnson",
+        message_type: "image",
+        content:
+          "https://primefaces.org/cdn/primereact/images/galleria/galleria10.jpg",
+      },
+      {
+        sender: "User",
+        time: "10:10",
+        sender_name: "Bob Smith",
+        message_type: "text",
+        content: "Que legal! Onde foi tirada essa foto?",
+      },
+    ],
+    message: "success",
+  },
+];

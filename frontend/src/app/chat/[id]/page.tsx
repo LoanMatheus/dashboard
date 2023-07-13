@@ -1,13 +1,13 @@
 'use client'
+import ChatBody from "@/components/ChatPage/ChatBody";
 import ChatFooter from "@/components/ChatPage/Footer";
 import IdClient from "@/components/ChatPage/IdCard";
 import ImgAvatar from "@/components/ImgAvatar";
 import Body from "@/components/Layout";
 import { Button } from "primereact/button";
 import { Menu } from "primereact/menu";
-import { TieredMenu } from 'primereact/tieredmenu';
 import { useRef, useState } from "react";
-import { BiBlock, BiDotsHorizontalRounded, BiUser } from "react-icons/bi";
+import { BiDotsHorizontalRounded, BiUser } from "react-icons/bi";
 import { TbPhoneOff, TbUserCancel, TbUserShare } from "react-icons/tb";
 
 export default function Chat() {
@@ -58,7 +58,7 @@ export default function Chat() {
           <ChatFooter />
         }
       >
-
+        <ChatBody />
       </Body>
       <IdClient open={show} close={setshow} />
     </>

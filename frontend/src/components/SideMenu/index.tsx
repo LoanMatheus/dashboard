@@ -10,7 +10,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { BsDot } from 'react-icons/bs'
 import { FaWhatsapp } from "react-icons/fa";
 import { TbBrandTelegram } from "react-icons/tb";
-import Cards from "../Card";
+import Cards from "../Cards";
 import ChatsMenu from "./UserMenus/Chats";
 
 export default function SideMenu(props: any) {
