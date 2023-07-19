@@ -14,10 +14,6 @@ body {
   color: var(--text-color);
 }
 
-.p-card-body {
-  padding: 0 !important;
-}
-
 .p-button:disabled {
   cursor: not-allowed !important;
   pointer-events: all !important;
@@ -71,27 +67,25 @@ body {
   margin: 12px 0;
 }
 
-.p-card-content {
-  padding: 0 !important;
-}
+
 
 .p-menu.p-menu-overlay {
   border: 1px solid var(--gray-200) !important;
 }
 
-.sender {
+.sender-user {
   background-color: var(--surface-b) !important;
 
 }
 
-.sender::before {
+.sender-user::before {
   content: '';
   position: absolute;
   right: 0;
-  top: 30%;
+  top: 10px;
   width: 0;
   height: 0;
-  border: 0.844em solid transparent;
+  border: 1em solid transparent;
   border-left-color: var(--surface-b);
   border-right: 0;
   border-top: 0;
@@ -111,7 +105,7 @@ body {
   top: 10px;
   width: 0;
   height: 0;
-  border: 0.944em solid transparent;
+  border: 1em solid transparent;
   border-right-color: var(--primary-color);
   border-left: 0;
   border-top: 0;

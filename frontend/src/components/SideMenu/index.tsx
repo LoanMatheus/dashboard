@@ -12,6 +12,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import { TbBrandTelegram } from "react-icons/tb";
 import Cards from "../Cards";
 import ChatsMenu from "./UserMenus/Chats";
+import GroupsMenu from "./UserMenus/Groups";
+import Contacts from "./UserMenus/Contacts";
 
 export default function SideMenu(props: any) {
   const { role } = useContext(ContextGlobal)
@@ -123,11 +125,11 @@ export default function SideMenu(props: any) {
           )
         case 3:
           return (
-            <Menu model={link} className="xl:max-w-16rem col-12 xl:col-3" />
+            <GroupsMenu />
           )
         case 4:
           return (
-            <></>
+            <Contacts />
           )
         case 5:
           return (

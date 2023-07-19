@@ -2,7 +2,7 @@ import { getConversations } from "@/api/mocks";
 import { Avatar } from "primereact/avatar";
 import { BiDownload, BiFile, BiUser } from "react-icons/bi";
 import { Image } from 'primereact/image';
-import Card from "@/components/Card";
+import { Card } from "@/components/Card";
 import { Button } from "primereact/button";
 export default function ChatBody() {
 
@@ -61,26 +61,26 @@ export default function ChatBody() {
           <div className="flex justify-content-start my-2">
             <Avatar image={'https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png'} icon={<BiUser />} className="w-2rem h-2rem mx-2" shape="circle" />
             <div className="relative mx-2">
-              <Card className="sender-client">
+              <Card.Root className="sender-client">
                 <div className={`flex flex-wrap card-container w-max max-w-${message_type == 'text' ? '24rem' : '20rem'}`}>
                   {msgBody(message_type, message)}
                 </div>
                 <span className="text-xs block w-full text-right pt-2">{time}</span>
-              </Card>
+              </Card.Root>
             </div>
           </div>
         )
       case 'User':
         return (
-          <div className="flex justify-content-end my-2">
+          <div className="flex flex-row-reverse justify-start-end my-2">
             <Avatar image={'https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png'} icon={<BiUser />} className="w-2rem h-2rem mx-2" shape="circle" />
             <div className="relative mx-2">
-              <Card className="sender-user">
+              <Card.Root className="sender-user">
                 <div className={`flex flex-wrap card-container w-max max-w-${message_type == 'text' ? '24rem' : '20rem'}`}>
                   {msgBody(message_type, message)}
                 </div>
                 <span className="text-xs block w-full text-right pt-2">{time}</span>
-              </Card>
+              </Card.Root>
             </div>
           </div>
         )

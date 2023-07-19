@@ -22,7 +22,9 @@ export default function RootLayout(
         <Head />
         <body className="flex col-12 m-0 p-0">
           <Header />
-          {children}
+          <div className="w-full">
+            {children}
+          </div>
         </body>
       </html>
     </ProviderGlobal>

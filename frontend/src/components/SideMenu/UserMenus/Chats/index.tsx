@@ -3,11 +3,13 @@ import { useRouter } from "next/navigation";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
 import { Menu } from "primereact/menu";
+import { Dropdown } from 'primereact/dropdown';
 import { AiOutlineSearch } from "react-icons/ai";
 import { getChats } from "@/api/mocks";
 import { Avatar } from 'primereact/avatar';
 import { Badge } from 'primereact/badge';
 import { BiUser } from "react-icons/bi";
+import { useState } from "react";
 
 type ChatData = {
   id?: number,
@@ -23,6 +25,8 @@ type ChatData = {
   read?: boolean,
 }
 export default function ChatsMenu() {
+  const [status, setStatus] = useState({ name: 'Abertos' })
+
   const router = useRouter()
 
   const items = (body: ChatData, route: string) => {
@@ -63,42 +67,10 @@ export default function ChatsMenu() {
     return newData
   })
 
-  const menuItem = [
-    items({
-      id: 1,
-      name: "Jane Doe",
-      userImg: "https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png",
-      message: "Hello",
-      phone: "55454891919",
-      status: "Atendimento",
-      sector: 3,
-      chatId: 155,
-      created_at: "2021-01-01T00:00:00.000Z",
-      updated_at: "2023-07-06T00:00:00.000Z",
-      read: false
-    },
-      '1'
-    ),
-    {
-      command: () => { console.log('rota') },
-      template: (item: any, options: any) => {
-        return (
-          <Button onClick={(e) => options.onClick(e)} outlined text className="flex align-items-stretch col-12 p-2">
-            <div className="col-2 p-0 m-0">
-              <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" className="w-3rem h-3rem" shape="circle" />
-            </div>
-            <div className="flex flex-column align-items-start justify-content-evenly col-8 m-0 py-0">
-              <h4 className="font-bold text-color m-0">Amy Elsner</h4>
-              <span className="text-sm text-color">Ultima mensagem enviada</span>
-            </div>
-            <div className="flex flex-column align-items-end justify-content-evenly col-2 m-0 py-0">
-              <h6 className="text-color m-0">05 min</h6>
-              <Badge value="2" severity={'danger'}></Badge>
-            </div>
-          </Button>
-        )
-      }
-    },
+  const chatStatus = [
+    { name: 'Abertos' },
+    { name: 'Em Espera' },
+    { name: 'Fechados' },
   ]
 
   return (
@@ -146,7 +118,10 @@ export default function ChatsMenu() {
         </div>
       </div>
 
-      <h4 className="py-0 mx-3 mb-2">Atendimentos</h4>
+      <div className="flex align-items-center justify-content-between p-0 mx-3 my-2">
+        <h4 className="p-0 m-0">Atendimentos</h4>
+        <Dropdown options={chatStatus} optionLabel="name" value={status} onChange={(e) => setStatus(e.value)} />
+      </div>
       <div className="overflow-y-auto p-1">
         <Menu model={dados} className="w-full surface-ground shadow-none border-none" />
       </div>

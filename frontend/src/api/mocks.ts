@@ -349,3 +349,45 @@ export const getConversations = [
     message: "success",
   },
 ];
+
+export const getGroups = [
+  {
+    success: true,
+    data: [
+      {
+        id: 1234567890,
+        name: "Meu Grupo",
+        description: "Um grupo para amigos e familiares",
+        members: [1234567890, 9876543210, 5555555555],
+        last_message: {
+          id: 1234567890,
+          date: "2023-03-08T12:00:00Z",
+          text: "Olá, pessoal!",
+        },
+      },
+      {
+        id: 9876543210,
+        name: "Trabalho",
+        description: "Um grupo para colegas de trabalho",
+        members: [1234567890, 9876543210, 5555555555, 7777777777],
+        last_message: {
+          id: 9876543210,
+          date: "2023-03-09T12:00:00Z",
+          text: "A reunião do projeto foi remarcada para amanhã às 10h.",
+        },
+      },
+      {
+        id: 5555555555,
+        name: "Faculdade",
+        description: "Um grupo para alunos da faculdade",
+        members: [1234567890, 9876543210, 5555555555, 7777777777],
+        last_message: {
+          id: 5555555555,
+          date: "2023-03-10T12:00:00Z",
+          text: "Alguém sabe onde posso encontrar o professor da matemática?",
+        },
+      },
+    ],
+    message: "success",
+  },
+];

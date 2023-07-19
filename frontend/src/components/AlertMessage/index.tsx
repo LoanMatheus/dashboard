@@ -17,7 +17,7 @@ export default function AlertMessage(props: ToastWrapperProps) {
     summary,
     detail,
     life,
-    sticky,
+    sticky = false,
     showToast,
   } = props;
 

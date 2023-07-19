@@ -10,7 +10,7 @@ import { Avatar } from "primereact/avatar";
 export default function IdClient(props: any) {
   const { open, close } = props;
   return (
-    <Cards className={`col-3 ${open ? '' : 'hidden'} m-0 p-0`}>
+    <Cards className={`col-3 ${open ? '' : 'hidden'} m-0 p-0 max-h-screen`}>
       <div className="flex justify-content-end">
         <Button icon={<BiX className="text-1xl" />} text outlined onClick={() => close(false)} />
       </div>
@@ -26,7 +26,7 @@ export default function IdClient(props: any) {
       </div>
       <Divider className="mb-1" />
 
-      <div className="text-color-secondary overflow-auto h-24rem px-3" >
+      <div className="text-color-secondary overflow-auto h-28rem px-3" >
         <span className="">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod cupiditate harum soluta quae velit pariatur ut ullam adipisci illum nostrum dolore neque, debitis quibusdam consequatur eaque vel, veritatis possimus natus?
         </span>
@@ -63,6 +63,30 @@ export default function IdClient(props: any) {
                 </div>
                 <div className="flex flex-column align-items-start justify-content-evenly col mx-2 py-0">
                   <h5 className="font-bold text-color m-0">Nome_do_arquivo.teste</h5>
+                  <span className="text-sm text-color-secondary">100kb</span>
+                </div>
+                <div className="flex align-items-center col-2">
+                  <BiDownload />
+                </div>
+              </Button>
+              <Button onClick={(e) => console.log(e)} outlined className="flex align-items-stretch col-12 p-2 my-2">
+                <div className="col-2 p-0 m-0">
+                  <Avatar icon={<BiImages />} className="w-3rem h-3rem" />
+                </div>
+                <div className="flex flex-column align-items-start justify-content-evenly col mx-2 py-0">
+                  <h5 className="font-bold text-color m-0">Nome_do_arquivo.jpg</h5>
+                  <span className="text-sm text-color-secondary">100kb</span>
+                </div>
+                <div className="flex align-items-center col-2">
+                  <BiDownload />
+                </div>
+              </Button>
+              <Button onClick={(e) => console.log(e)} outlined className="flex align-items-stretch col-12 p-2 my-2">
+                <div className="col-2 p-0 m-0">
+                  <Avatar icon={<BiImages />} className="w-3rem h-3rem" />
+                </div>
+                <div className="flex flex-column align-items-start justify-content-evenly col mx-2 py-0">
+                  <h5 className="font-bold text-color m-0">Nome_do_arquivo.jpg</h5>
                   <span className="text-sm text-color-secondary">100kb</span>
                 </div>
                 <div className="flex align-items-center col-2">

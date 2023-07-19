@@ -1,5 +1,5 @@
 'use client'
-import { Card } from "primereact/card";
+import * as Component from "primereact/card";
 
 type CardsProps = {
   className?: string
@@ -11,9 +11,17 @@ type CardsProps = {
 }
 
 export default function Cards(props: CardsProps) {
-  const { className, header, title, subTitle, footer, children } = props
+  const {
+    className,
+    header,
+    title,
+    subTitle,
+    footer,
+    children
+  } = props
+
   return (
-    <Card
+    <Component.Card
       header={header}
       className={className}
       title={title}
@@ -21,6 +29,6 @@ export default function Cards(props: CardsProps) {
       footer={footer}
     >
       {children}
-    </Card>
+    </Component.Card>
   )
 }
