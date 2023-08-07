@@ -12,6 +12,7 @@ interface InputTextProps {
   iconPosition?: 'left' | 'right'
   size?: 'small' | 'normal' | 'large'
   disabled?: boolean
+  inputValue?: (value: string) => void
 }
 
 export default function InputText(props: InputTextProps) {
@@ -27,7 +28,8 @@ export default function InputText(props: InputTextProps) {
     icon,
     iconPosition = 'left',
     size = 'normal',
-    disabled = false
+    disabled = false,
+    inputValue,
   } = props;
 
   const getSize = () => {
@@ -47,6 +49,14 @@ export default function InputText(props: InputTextProps) {
     return 'p-invalid'
   }
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue: string = e.target.value;
+    setValue(newValue);
+    if (inputValue && typeof inputValue === 'function') {
+      inputValue(newValue);
+    }
+  };
+
   return (
     <div className="flex flex-column gap-1">
       <label htmlFor={id}>{label}</label>
@@ -57,7 +67,7 @@ export default function InputText(props: InputTextProps) {
           className={`${className} ${getSize()} ${isValid()}`}
           aria-describedby={helpTextId}
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={handleChange}
           disabled={disabled}
         />
       </span>
