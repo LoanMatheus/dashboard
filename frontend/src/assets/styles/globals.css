@@ -37,3 +37,78 @@ body {
   top: 10px;
   right: 17px;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--surface-0);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: var(--gray-0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: var(--gray-200);
+}
+
+.p-avatar-circle {
+  border-radius: 50% !important;
+}
+
+.p-inputtextarea {
+  height: 50px;
+}
+
+.p-accordion-tab {
+  margin: 12px 0;
+}
+
+
+
+.p-menu.p-menu-overlay {
+  border: 1px solid var(--gray-200) !important;
+}
+
+.sender-user {
+  background-color: var(--surface-b) !important;
+
+}
+
+.sender-user::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border: 1em solid transparent;
+  border-left-color: var(--surface-b);
+  border-right: 0;
+  border-top: 0;
+  margin-top: -0.222em;
+  margin-right: -0.844em;
+}
+
+.sender-client {
+  background-color: var(--primary-color) !important;
+  color: var(--surface-0) !important
+}
+
+.sender-client::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border: 1em solid transparent;
+  border-right-color: var(--primary-color);
+  border-left: 0;
+  border-top: 0;
+  margin-top: -0.222em;
+  margin-left: -0.844em;
+}

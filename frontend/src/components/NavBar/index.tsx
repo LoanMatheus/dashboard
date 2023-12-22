@@ -150,7 +150,7 @@ export default function Navbar(props: any) {
   }
 
   return (
-    <div className="flex flex-column justify-content-between z-1 col-1 m-0 h-screen shadow-1 max-w-5rem">
+    <div className="flex flex-column justify-content-between surface-card z-1 col-1 m-0 h-screen shadow-1 max-w-5rem">
       <div className="col-12">
         <Image src={logo} alt="" className="w-full h-auto" priority={true} />
       </div>

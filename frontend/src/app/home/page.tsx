@@ -1,9 +1,12 @@
-import Layout from "@/components/Layout";
+import Body from "@/components/Layout";
 
 export default function Home() {
   return (
-    <Layout>
+    <Body
+      header
+      title="Pagina Inicial"
+    >
 
-    </Layout>
+    </Body>
   )
 }

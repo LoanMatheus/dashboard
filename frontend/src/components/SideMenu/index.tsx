@@ -1,12 +1,19 @@
 'use client'
 import { ContextGlobal } from "@/context";
 import { useRouter } from "next/navigation";
+import { Button } from "primereact/button";
+import { InputText } from "primereact/inputtext";
 import { Menu } from "primereact/menu";
 import { useContext } from "react";
+import { AiOutlineSearch } from "react-icons/ai";
 
 import { BsDot } from 'react-icons/bs'
 import { FaWhatsapp } from "react-icons/fa";
 import { TbBrandTelegram } from "react-icons/tb";
+import Cards from "../Cards";
+import ChatsMenu from "./UserMenus/Chats";
+import GroupsMenu from "./UserMenus/Groups";
+import Contacts from "./UserMenus/Contacts";
 
 export default function SideMenu(props: any) {
   const { role } = useContext(ContextGlobal)
@@ -78,33 +85,64 @@ export default function SideMenu(props: any) {
   ]
 
 
-
-  switch (sideMenu) {
+  switch (role) {
     case 1:
-      return (<></>)
+      switch (sideMenu) {
+        case 1:
+          return (<></>)
+        case 2:
+          return (
+            <div className="">
+              <Menu model={registration} className="xl:max-w-16rem col-12 xl:col-3" />
+            </div>
+          )
+        case 3:
+          return (
+            <Menu model={link} className="xl:max-w-16rem col-12 xl:col-3" />
+          )
+        case 4:
+          return (
+            <></>
+          )
+        case 5:
+          return (
+            <Menu model={clients} className="xl:max-w-16rem col-12 xl:col-3" />
+          )
+        case 6:
+          return (
+            <Menu model={configuration} className="xl:max-w-16rem col-12 xl:col-3" />
+          )
+        default:
+          return (<></>)
+      }
     case 2:
-      return (
-        <div className="">
-          <Menu model={registration} className="xl:max-w-16rem col-12 xl:col-3" />
-        </div>
-      )
-    case 3:
-      return (
-        <Menu model={link} className="xl:max-w-16rem col-12 xl:col-3" />
-      )
-    case 4:
-      return (
-        <></>
-      )
-    case 5:
-      return (
-        <Menu model={clients} className="xl:max-w-16rem col-12 xl:col-3" />
-      )
-    case 6:
-      return (
-        <Menu model={configuration} className="xl:max-w-16rem col-12 xl:col-3" />
-      )
-    default:
-      return (<></>)
+      switch (sideMenu) {
+        case 1:
+          return (<></>)
+        case 2:
+          return (
+            <ChatsMenu />
+          )
+        case 3:
+          return (
+            <GroupsMenu />
+          )
+        case 4:
+          return (
+            <Contacts />
+          )
+        case 5:
+          return (
+            <Menu model={clients} className="xl:max-w-16rem col-12 xl:col-3" />
+          )
+        case 6:
+          return (
+            <Menu model={configuration} className="xl:max-w-16rem col-12 xl:col-3" />
+          )
+        default:
+          return (<></>)
+      }
   }
+
+
 }
