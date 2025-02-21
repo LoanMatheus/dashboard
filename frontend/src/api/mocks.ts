@@ -3,7 +3,6 @@ type Response = {
   message: string;
 };
 
-
 export const reqLogin = () => {
   interface DataProps extends Response {
     data: { token: string };
@@ -33,7 +32,6 @@ export const reqLogValidation = () => {
     }, 1000);
   });
 };
-
 
 export const reqGetAllUsers = [
   {
@@ -245,7 +243,8 @@ export const getChats = [
       {
         id: 1,
         name: "Jane Doe",
-        userImg: "https://sf",
+        userImg:
+          "https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png",
         message: "Hello",
         phone: "55454891919",
         status: "Atendimento",
@@ -257,7 +256,8 @@ export const getChats = [
       {
         id: 2,
         name: "55454891919",
-        userImg: "https://sf",
+        userImg:
+          "https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png",
         message: "Hello",
         phone: "55454891919",
         status: "Atendimento",
@@ -291,6 +291,102 @@ export const getChats = [
         updated_at: "2021-01-01T00:00:00.000Z",
       },
       {},
+    ],
+    message: "success",
+  },
+];
+
+export const getConversations = [
+  {
+    success: true,
+    data: [
+      {
+        sender: "Client",
+        time: "10:00",
+        sender_name: "Alice Johnson",
+        message_type: "text",
+        content: "Olá, como você está?",
+      },
+      {
+        sender: "User",
+        time: "10:02",
+        sender_name: "Bob Smith",
+        message_type: "image",
+        content:
+          "https://primefaces.org/cdn/primereact/images/galleria/galleria10.jpg",
+      },
+      {
+        sender: "Client",
+        time: "10:07",
+        sender_name: "Alice Johnson",
+        message_type: "image",
+        content:
+          "https://primefaces.org/cdn/primereact/images/galleria/galleria10.jpg",
+      },
+      {
+        sender: "Client",
+        time: "10:05",
+        sender_name: "Alice Johnson",
+        message_type: "file",
+        content: "Também estou bem, obrigada!",
+      },
+      {
+        sender: "Client",
+        time: "10:07",
+        sender_name: "Alice Johnson",
+        message_type: "image",
+        content:
+          "https://primefaces.org/cdn/primereact/images/galleria/galleria10.jpg",
+      },
+      {
+        sender: "User",
+        time: "10:10",
+        sender_name: "Bob Smith",
+        message_type: "text",
+        content: "Que legal! Onde foi tirada essa foto?",
+      },
+    ],
+    message: "success",
+  },
+];
+
+export const getGroups = [
+  {
+    success: true,
+    data: [
+      {
+        id: 1234567890,
+        name: "Meu Grupo",
+        description: "Um grupo para amigos e familiares",
+        members: [1234567890, 9876543210, 5555555555],
+        last_message: {
+          id: 1234567890,
+          date: "2023-03-08T12:00:00Z",
+          text: "Olá, pessoal!",
+        },
+      },
+      {
+        id: 9876543210,
+        name: "Trabalho",
+        description: "Um grupo para colegas de trabalho",
+        members: [1234567890, 9876543210, 5555555555, 7777777777],
+        last_message: {
+          id: 9876543210,
+          date: "2023-03-09T12:00:00Z",
+          text: "A reunião do projeto foi remarcada para amanhã às 10h.",
+        },
+      },
+      {
+        id: 5555555555,
+        name: "Faculdade",
+        description: "Um grupo para alunos da faculdade",
+        members: [1234567890, 9876543210, 5555555555, 7777777777],
+        last_message: {
+          id: 5555555555,
+          date: "2023-03-10T12:00:00Z",
+          text: "Alguém sabe onde posso encontrar o professor da matemática?",
+        },
+      },
     ],
     message: "success",
   },

@@ -1,6 +1,6 @@
 'use client'
 import AlertMessage from "@/components/AlertMessage"
-import Cards from "@/components/Card"
+import Cards from "@/components/Cards"
 import ThemeButton from "@/components/ThemeButton"
 import { ContextGlobal } from "@/context"
 import { LogFunctions } from "@/utils/LogFunctions"
@@ -81,7 +81,7 @@ export default function Login() {
       />
 
       <div className="flex justify-content-center align-items-center h-screen col-12">
-        <Cards title="Bem Vindo" className="text-center col-4" footer={cardFooter}>
+        <Cards title="Bem Vindo" className="text-center col-4 p-5" footer={cardFooter}>
           <div className="flex flex-column gap-1 pb-2 text-left">
             <label htmlFor="UserName">E-mail</label>
             {<InputText
